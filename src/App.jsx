@@ -6,7 +6,6 @@ import Home from './components/Home/Home'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './components/Layout/Layout'
 import Details from './components/Details/Details'
-import CustomerContextProvider from './context/CustomerContext'
 function App() {
   let router = createBrowserRouter([
     {
@@ -19,9 +18,7 @@ function App() {
 
   return (
     <>
-      <CustomerContextProvider>
         <RouterProvider router={router}></RouterProvider>
-      </CustomerContextProvider>
     </>
   )
 }
