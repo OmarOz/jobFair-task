@@ -6,21 +6,24 @@ import Home from './components/Home/Home'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './components/Layout/Layout'
 import Details from './components/Details/Details'
+
 function App() {
   let router = createBrowserRouter([
     {
-      path: '', element: <Layout />, children: [
+      path: '/',
+      element: <Layout />,
+      children: [
         { index: true, element: <Home /> },
         { path: 'details/:id', element: <Details /> },
-      ]
-    }
-  ])
+      ],
+    },
+  ], {
+    basename: '/jobFair-task',  // Set the basename for the router
+  });
 
   return (
-    <>
-        <RouterProvider router={router}></RouterProvider>
-    </>
-  )
+    <RouterProvider router={router} />
+  );
 }
 
-export default App
+export default App;
