@@ -18,7 +18,7 @@ function App() {
       ],
     },
   ], {
-    basename: '/jobFair-task',  // Set the basename for the router
+    basename: '/jobFair-task',
   });
 
   return (
